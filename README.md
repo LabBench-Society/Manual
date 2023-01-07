@@ -1,2 +1,5 @@
-# Manual
-LabBench Manual
+# LabBench Manual
+
+## Preface
+
+## Table of Contents
