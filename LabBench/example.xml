@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book>
+  <title>The Great Gatsby</title>
+  <author>F. Scott Fitzgerald</author>
+  <publisher>Charles Scribner's Sons</publisher>
+  <publish_date>1925</publish_date>
+  <isbn>9780743273565</isbn>
+  <language>English</language>
+  <description>The Great Gatsby is a novel by F. Scott Fitzgerald, published in 1925. It tells the story of Jay Gatsby, a wealthy man who throws extravagant parties in an attempt to win back his lost love, Daisy Buchanan.</description>
+  <price>9.99</price>
+  <genres>
+    <genre>Literary Fiction</genre>
+    <genre>Classic</genre>
+    <genre>Romance</genre>
+  </genres>
+  <reviews>
+    <review>
+        <reviewer>John Smith</reviewer>
+        <review_text>The Great Gatsby is a masterful tale of love and loss. Fitzgerald's writing is impeccable and the characters are richly drawn. A must-read for fans of classic literature.</review_text>
+        <review_date>2022-01-01</review_date>
+    </review>
+    <review>
+        <reviewer>Jane Doe</reviewer>
+        <review_text>I found The Great Gatsby to be a bit slow-moving and the ending was a bit disappointing. But, Fitzgerald's writing is beautiful and the characters are well-developed.</review_text>
+        <review_date>2022-02-01</review_date>
+    </review>
+  </reviews>
+</book>
