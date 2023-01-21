@@ -9,7 +9,7 @@
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
 
 \lstdefinestyle{LabBenchCodingStyle}{
     backgroundcolor=\color{backcolour},   
@@ -47,9 +47,8 @@
 
 \begin{document}
 
-
-\title{LabBench Manual}
-\author{Kristian Hennings}
+\title{LabBench}
+\author{Kristian Hennings, M.Sc.EE., Ph.D.}
 
 \frontmatter
 \maketitle
@@ -64,25 +63,25 @@
 \input{./tex/ch01_Introduction.tex}
 
 % Chapter 2: Installation
+\input{./tex/ch02_Installation.tex}
 
 % Chapter 3: Managing Devices
+\input{./tex/ch03_ManagingDevices.tex}
 
 % Chapter 4: Creating and Managing Experiments
+\input{./tex/ch04_CreatingAndManagingExperiments.tex}
 
 % Chapter 5: Logging
+\input{./tex/ch05_Logging.tex}
 
 % Chapter 6: Protocol Repositories
+\input{./tex/ch06_ProtocolRepositories.tex}
 
 % Chapter 7: Writing Protocols
+\input{./tex/ch07_WritingProtocols.tex}
 
 % Chapter 8: Scripting
-
-\chapter{Scripting}
-
-An example of how to include code from a file
-
-\lstinputlisting[language=Python, caption=Example Python Function]{./code/example.py}
-
+\input{./tex/ch08_Scripting.tex}
 
 \appendix
 
@@ -91,8 +90,6 @@ An example of how to include code from a file
 % Appendix B: An introduction to Python
 
 % Appendix C: Backup and restore
-
-\chapter{First Appendix}
 
 \backmatter
 
