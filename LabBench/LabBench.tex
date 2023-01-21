@@ -1,18 +1,38 @@
 \documentclass[12pt, twoside, a4paper]{book}
+
+% PREAMBLE
+\usepackage{setspace}
+\usepackage{listings}
+
+% Set the line spacing (command from the setspace package)
+\setstretch{1.1}
+
+% The paragraph after a sectioning command is not indented; the \parindent parameter controls the indentation of subsequent paragraphs.
+% In this document, no paragraphs are indented.
+\setlength{\parindent}{0cm} % Default is 15pt.
+
+% The \parskip parameter controls the amount of space between paragraphs. It is given as the space and how much it can be varied to fill
+% a page beautifully. 
+\setlength{\parskip}{0.25cm plus 0.05mm minus 0.05mm}
+
 \begin{document}
+
 
 \title{LabBench Manual}
 \author{Kristian Hennings}
 
+\frontmatter
 \maketitle
 
 \tableofcontents
 
-\chapter{Preface}
+\chapter*{Preface}
 
 A preface to a book is typically used to provide background information about the book, the author's intentions for writing it, and any special considerations for reading or understanding the book. It may also contain information about the author's qualifications or experiences that led them to write the book. A preface may also contain acknowledgements of those who helped the author during the writing process.
 
 ChatGPT creating Lorem Ipsum Text for Inventors' Way
+
+\mainmatter
 
 \chapter{Introduction}
 
@@ -36,5 +56,17 @@ An introduction typically includes the following elements:
 \end{enumerate}
 
 An introduction serves as a roadmap for the reader, helping them understand what to expect from the book and how the author will approach the topic. It helps the reader focus on the main ideas and mentally and emotionally prepare themselves to engage with the book's content.
+
+\chapter{Scripting}
+
+An example of how to include code from a file
+
+\lstinputlisting[language=python]{example.py}
+
+\appendix
+
+\chapter{First Appendix}
+
+\backmatter
 
 \end{document}
