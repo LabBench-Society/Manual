@@ -1,14 +1,32 @@
 \chapter{Instruments}
 \label{ch:Instruments}
 
-Instruments represent abstractions of actual research devices you would use in the experimental setup for your study. LabBench uses abstract Instruments, so the tests provided by LabBench are not specific to one research device. Instead, different research devices may be used for the same test as long as they have the capabilities required for running the LabBench test.
+Instruments are used to apply stimuli, record physiological signals, and collect responses from subjects. Each LabBench test, which implements a specific experimental procedure such as the estimation of psychometric functions or psychophysiological rating recordings, requires a set of instruments to be performed. The Instruments required by a test are described in the "Experimental setup" sections of the Test Data Sheets provided at the end of this book.
 
-Devices are the research instruments you use in your experimental setups, such as amplifiers, stimulators and data acquisition devices. Most protocols will need a set of research instruments to be executed. 
-LabBench handles experimental setups with three concepts, Instruments, Devices, and Device Maps:
+This chapter intends to provide an overview and descriptions of the Instruments LabBench provides, so you may decide which instruments are required for your protocols.
+
+Instruments represent abstractions of actual research devices you would use in the experimental setup for your study. LabBench uses abstract Instruments, so the tests provided by LabBench are not specific to one specific type of research device. Instead, different research devices may be used for the same test as long as they implement the Instruments that this test requires. 
+
+An example of this approach is the tests for cuff pressure algometry, such as the ~\nameref{sec:AlgometryStimulusResponse} ~test, which can be used to measure a subject's Pressure Pain Threshold (PPT) and Pressure Tolerance Threshold (PTT). Assume that you want to use this test to measure the PPT and PTT in young and elderly, then you could use either the Nocitech CPAR or the LabBench CPAR+ in your experimental setup for your study without having to change anything in your protocol definition file (*.prtx). This is possible because both devices implement the~ \nameref{subsec:PressureAlgometer} ~Instrument. If LabBench did not have abstract Instruments, then LabBench would have required specific tests for each type of research device that LabBench supports. Consequently, there would be a "Nocitech CPAR Algometry Stimulus Response" and a "Labench CPAR Algometry Stimulus Response" test.
+
+The rest of the chapter provides descriptions of the LabBench Instruments.
 
 \section{Quantitative sensory testing}
 
+Quantitative sensory testing (QST) measures the sensory function of a subject. It is used to evaluate the skin's and other tissues' sensitivity to stimuli such as pressure or temperature. QST is commonly used to study the function of the nervous system in conditions such as neuropathy or chronic pain. 
+
 \subsection{Pressure algometer}
+\label{subsec:PressureAlgometer}
+
+A Pressure Algometer is a device that can apply pressure to a subject's arm or leg under computer control. The device may contain several pressure channels, determining how many sites on the subject can simultaneously be stimulated. This device can perform experimental procedures such as measurement of pressure pain threshold and tolerance, temporal summation, and conditioned pain modulation. 
+
+The device typically consists of an inflated cuff to apply pressure to a subject's leg or arm. A pressure regulator controls the air pressure under computer control, allowing precise pressure stimuli with high temporal resolution.
+
+\subsection{Manual pressure algometer}
+
+A manual pressure algometer that can measure the pressure an experimenter applies to a subject. The device may indicate to the experimenter whether the pressure is correct according to the experimental procedures for the test. This device can evaluate a person's pressure pain threshold and tolerance.
+
+The device typically consists of a handle and a probe, which is pressed against the skin with increasing force. The person being tested is asked to indicate when they first feel pain (pressure pain threshold) and when it becomes unbearable (pressure pain tolerance). The results are typically reported in kg/cm².
 
 \section{Signal generation}
 
