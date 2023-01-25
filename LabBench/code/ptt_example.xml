@@ -1,0 +1,54 @@
+<templates>    
+   <psychophysics-threshold-estimation ID="ptt">
+     <update-rate-deterministic value="2000" />
+     <yes-no-task>
+       <sampling sample-duration="1.2" sample-rate="100000"/>
+     </yes-no-task>
+     <channels>
+       <channel channel-type="single-sample"
+                trigger="0"
+                channel="0"
+                Imax="Stimulator.Imax">
+         <up-down-method down-rule="1"
+                         up-rule="1"
+                         max-intensity="1"
+                         min-intensity="0"
+                         skip-rule="SkipRule"
+                         start-intensity="0.4 * TEST['C01']/Stimulator.Imax"
+                         step-size-up="StepSize"
+                         step-size-down="StepSize"
+                         step-size-type="relative"
+                         terminate-on-limit-reached="true"
+                         max-step-size-reduction="MaxStepSizeReduction"
+                         step-size-reduction="StepSizeReduction"
+                         stop-criterion="reversals"
+                         stop-rule="StopRule">
+           <quick alpha="0.5" beta="1" lambda="0.02" gamma="0.0" />
+         </up-down-method>
+       </channel>
+       </channels>
+   </psychophysics-threshold-estimation>
+</templates>
+<tests>
+   <psychophysics-threshold-estimation ID="T01" 
+                                       template="ptt"
+                                       name="SD-Curve (Up/Down)">
+     <dependencies>
+       <dependency ID="TEST"/>
+     </dependencies>
+     <channels>
+       <channel ID="C01" name="Rect (1000us)">
+         <pulse Is="x" Ts="1" Tdelay="0" />
+       </channel>
+       <channel ID="C02" name="Rect (500us)">
+         <pulse Is="x" Ts="0.5" Tdelay="0" />
+       </channel>
+       <channel ID="C03" name="Rect (200us)">
+         <pulse Is="x" Ts="0.2" Tdelay="0" />
+       </channel>
+       <channel ID="C04" name="Rect (100us)">
+         <pulse Is="x" Ts="0.1" Tdelay="0" />
+       </channel>
+     </channels>
+   </psychophysics-threshold-estimation>
+</tests>
