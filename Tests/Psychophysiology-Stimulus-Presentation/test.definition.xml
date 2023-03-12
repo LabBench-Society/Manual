@@ -1,0 +1,10 @@
+<psychophysics-stimulus-presentation ID="T1"
+                                     name="Stimulus presentation test"
+                                     intensities="[Imin * (1 + p) ** n for n in range(int(math.log(Imax / Imin, 1 + p)) + 1)]"
+                                     display-stimulus="True"
+                                     stimulus-rating="categorical"
+                                     triggers="1">
+   <pulse Is="x"
+          Ts="0.2"
+          Tdelay="0" />
+</psychophysics-stimulus-presentation>
